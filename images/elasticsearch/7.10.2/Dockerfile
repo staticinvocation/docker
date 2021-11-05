@@ -21,7 +21,7 @@ RUN chown elasticsearch:elasticsearch config/elasticsearch.yml
 
 ## set permissions so any user can run elasticsearch
 # add read permissions to all files in dir
-RUN chmod go+r /usr/share/elasticsearch -R
+RUN chmod go+r /usr/share/elasticsearch/config -R
 # add write permissions to config dir
 RUN chmod go+w /usr/share/elasticsearch \
     /usr/share/elasticsearch/config
